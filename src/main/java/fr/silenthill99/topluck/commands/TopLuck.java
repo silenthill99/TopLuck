@@ -1,5 +1,6 @@
 package fr.silenthill99.topluck.commands;
 
+import fr.silenthill99.topluck.Main;
 import fr.silenthill99.topluck.inventory.InventoryManager;
 import fr.silenthill99.topluck.inventory.InventoryType;
 import org.bukkit.Bukkit;
@@ -8,10 +9,15 @@ import org.bukkit.OfflinePlayer;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
+
+import java.io.File;
 
 public class TopLuck implements CommandExecutor
 {
+
+    Main main = Main.getInstance();
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args)
     {
@@ -39,7 +45,10 @@ public class TopLuck implements CommandExecutor
             return false;
         }
 
-        InventoryManager.openInventory(player, InventoryType.TOPLUCK, target);
+        File file = new File(main.getDataFolder(), "Players/" + target.getName() + ".yml");
+        YamlConfiguration config = YamlConfiguration.loadConfiguration(file);
+
+        InventoryManager.openInventory(player, InventoryType.TOPLUCK, target, file, config);
 
         return false;
     }

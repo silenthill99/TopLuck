@@ -24,7 +24,7 @@ public class Events implements Listener
         if (!player.hasPlayedBefore())
             config.set("Date de 1ère connection", new Date());
         config.set("Date de dernière connection", new Date());
-        config.set("ID", player.getUniqueId());
+        config.set("ID", player.getUniqueId().toString());
         try {
             config.save(file);
         } catch (IOException e) {

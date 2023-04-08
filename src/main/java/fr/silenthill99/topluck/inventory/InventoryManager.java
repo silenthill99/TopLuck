@@ -8,7 +8,6 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryCloseEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
-import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
 import org.bukkit.inventory.ItemStack;
 
@@ -36,7 +35,7 @@ public class InventoryManager implements Listener
     @EventHandler
     public void onClick(InventoryClickEvent event)
     {
-        if (event.getClickedInventory() != null || !(event.getWhoClicked() instanceof Player))
+        if (event.getClickedInventory() == null || !(event.getWhoClicked() instanceof Player))
             return;
         Player player = (Player) event.getWhoClicked();
         InventoryHolder holder = event.getClickedInventory().getHolder();
