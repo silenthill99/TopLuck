@@ -1,0 +1,9 @@
+name: TopLuck
+version: '${version}'
+main: fr.silenthill99.topluck.Main
+api-version: 1.16
+authors: [ silenthill99 ]
+commands:
+  topluck:
+    permission: oxydia.topluck
+    permission-message: §4Vous n'avez pas accès à cette commande !
