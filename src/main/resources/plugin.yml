@@ -1,0 +1,6 @@
+name: TopLuck
+version: '${version}'
+main: fr.silenthill99.topluck.Main
+api-version: '1.16'
+commands:
+  topluck:
