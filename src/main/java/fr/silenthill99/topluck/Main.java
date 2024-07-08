@@ -33,13 +33,16 @@ public final class Main extends JavaPlugin {
         getCommand("topluck").setExecutor(new TopLuckCommand());
     }
 
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
-    }
-
     public File createPlayerFile(Player player) {
         File file = new File(getDataFolder(), "Players/" + player.getName() + ".yml");
+        if (!file.exists()) {
+            try {
+                file.mkdirs();
+                file.createNewFile();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
         return file;
     }
 }
