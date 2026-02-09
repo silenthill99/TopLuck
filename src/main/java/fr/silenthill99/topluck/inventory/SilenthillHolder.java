@@ -2,11 +2,11 @@ package fr.silenthill99.topluck.inventory;
 
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.InventoryHolder;
-import org.jetbrains.annotations.NotNull;
 
 public class SilenthillHolder implements InventoryHolder {
+    @SuppressWarnings("DataFlowIssue")
     @Override
-    public @NotNull Inventory getInventory() {
+    public Inventory getInventory() {
         return null;
     }
 }
