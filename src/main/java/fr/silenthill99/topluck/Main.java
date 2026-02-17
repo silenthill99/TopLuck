@@ -37,7 +37,7 @@ public final class Main extends JavaPlugin {
         File file = new File(getDataFolder(), "Players/" + player.getName() + ".yml");
         if (!file.exists()) {
             try {
-                file.mkdirs();
+                file.getParentFile().mkdirs();
                 file.createNewFile();
             } catch (IOException e) {
                 throw new RuntimeException(e);

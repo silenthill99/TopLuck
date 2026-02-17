@@ -5,9 +5,9 @@ plugins {
 group = 'fr.silenthill99'
 version = '1.0-SNAPSHOT'
 
-tasks.withType(Jar).configureEach {
-    destinationDirectory = file("../serveur/plugins")
-}
+//tasks.withType(Jar).configureEach {
+//    destinationDirectory = file("../serveur/plugins")
+//}
 
 repositories {
     mavenCentral()

@@ -71,7 +71,8 @@ public class TopLuckInventory extends AbstractInventory<TopLuckHolder> {
         YamlConfiguration config = YamlConfiguration.loadConfiguration(file);
         double minerai = config.getDouble(path);
         double stone = config.getDouble("blocks.stone");
-        double taux = (minerai/stone) * 100;
+        if (stone == 0) return "0%";
+        double taux = (minerai / stone) * 100;
         return taux + "%";
     }
 }

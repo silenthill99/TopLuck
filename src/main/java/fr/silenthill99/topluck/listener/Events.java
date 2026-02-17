@@ -45,7 +45,7 @@ public class Events implements Listener {
             return;
         File file = main.createPlayerFile(player);
         YamlConfiguration config = YamlConfiguration.loadConfiguration(file);
-        String name = block.getType().name().toLowerCase();
+        String name = block.getType().name().toLowerCase().replace("_ore", "");
         config.set("blocks." + name, config.getDouble("blocks." + name) + 1);
         config.save(file);
     }
