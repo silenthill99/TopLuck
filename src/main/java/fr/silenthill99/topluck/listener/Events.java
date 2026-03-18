@@ -18,7 +18,7 @@ import java.util.List;
 public class Events implements Listener {
     Main main = Main.getInstance();
     public static final List<Material> SAVED_BLOCKS = Arrays.asList(Material.STONE, Material.DIAMOND_ORE,
-            Material.GOLD_ORE);
+            Material.GOLD_ORE, Material.DEEPSLATE_DIAMOND_ORE, Material.DEEPSLATE_GOLD_ORE);
 
     @EventHandler
     public void onJoin(PlayerJoinEvent event) {
@@ -29,6 +29,7 @@ public class Events implements Listener {
             config.set("blocks.stone", 0);
             config.set("blocks.diamond", 0);
             config.set("blocks.gold", 0);
+            config.set("blocks.deepslate_diamond", 0);
         }
         try {
             config.save(file);

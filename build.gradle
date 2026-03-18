@@ -5,9 +5,9 @@ plugins {
 group = 'fr.silenthill99'
 version = '1.0-SNAPSHOT'
 
-//tasks.withType(Jar).configureEach {
-//    destinationDirectory = file("../serveur/plugins")
-//}
+jar {
+    destinationDirectory = file("serveur/plugins")
+}
 
 repositories {
     mavenCentral()
@@ -22,7 +22,7 @@ repositories {
 }
 
 dependencies {
-    compileOnly "org.spigotmc:spigot-api:1.16.5-R0.1-SNAPSHOT"
+    compileOnly "org.spigotmc:spigot-api:1.21.1-R0.1-SNAPSHOT"
 }
 
 compileJava.options.encoding = "utf-8"
