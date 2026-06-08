@@ -38,7 +38,7 @@ public class TopLuckInventory extends AbstractInventory<TopLuckHolder> {
                 .toItemStack();
         ItemStack inventaire = new ItemBuilder(Material.CHEST).setName(ChatColor.YELLOW + "Voir l'inventaire")
                 .toItemStack();
-        ItemStack deepslateDiamond = new ItemBuilder(Material.DEEPSLATE_DIAMOND_ORE).setName("Taux de diamant des amîmes minés")
+        ItemStack deepslateDiamond = new ItemBuilder(Material.DEEPSLATE_DIAMOND_ORE).setName("Taux de diamant des abîmes minés")
                 .setLore(checkTaux(target, "blocks.deepslate_diamond")).toItemStack();
         ItemStack deepslateGold = new ItemBuilder(Material.DEEPSLATE_GOLD_ORE).setName("Taux d'or des abîmes minés")
                 .setLore(checkTaux(target, "blocks.deepslate_gold")).toItemStack();
